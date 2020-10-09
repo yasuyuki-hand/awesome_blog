@@ -1,0 +1,86 @@
+@import "bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ $favorite-color: rgb(236, 236, 236);
+
+body {
+    /* background-color: $favorite-color; */
+    font-family: 'VT323', monospace;
+}
+
+.form-view {
+    background-image: url(/assets/form.jpg);
+    background-size: 100%;
+    background-position: center;
+    color: white;
+}
+
+.main {
+    // background-image: url(/assets/view.jpg);
+    // background-size: 100%;
+    // width: auto;
+    // height: 400px;
+}
+
+.about {
+    border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
+    width:  150px;       /* ※縦横を同値に */
+    height: 150px;       /* ※縦横を同値に */
+}
+
+.users {
+    list-style: none;
+    margin: 0;
+    li {
+      overflow: auto;
+      padding: 10px 0;
+      border-top: 1px solid rgb(238, 238, 238);
+      &:last-child {
+        border-bottom: 1px solid rgb(238, 238, 238);
+      }
+    }
+  }
+
+  /* Microposts */
+.microposts-list {
+  list-style: none;
+  margin: 10px 0 0 0;
+
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+}
+.timestamp {
+  color: rgb(160, 160, 160);
+}
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+
+.fa-trash-alt {
+  color: red;
+}

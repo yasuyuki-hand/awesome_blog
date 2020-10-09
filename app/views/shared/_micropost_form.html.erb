@@ -1,0 +1,7 @@
+<%= form_for @micropost do |f| %>
+<div class="field">
+<%= f.text_area :content, placeholder: "What are you thinking about?", class: "w-100"%>
+</div>
+<%= f.submit "Post", class: "btn btn-block btn-primary mb-5"%>
+
+<% end %>

@@ -1,0 +1,11 @@
+<% if @feed_items.any? %>
+  <ol class="microposts-list">
+    <%# @feed_items -> it would go to _feed_item.html.erb %>
+    <%# partial: -> specify the correct file %>
+    <%# feed.html.erb -> <ol> / list %>
+    <%# feed_item.html.erb -> <li> / list items -> what will micropost look like in homepage %>
+    <%= render partial: 'shared/feed_item', collection: @feed_items %>
+    <%# collection: -> show all micropost under the name/ variable, @feed_items %>
+  </ol>
+  <%= will_paginate @feed_items %>
+<% end %>

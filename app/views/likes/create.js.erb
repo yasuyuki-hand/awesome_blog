@@ -1,0 +1,2 @@
+$("#like_form").html("<%= escape_javascript(render 'root_url') %>")
+$("#followers").html('<%= @user.micropost.count %>')

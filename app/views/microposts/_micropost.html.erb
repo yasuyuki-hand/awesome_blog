@@ -1,0 +1,17 @@
+<li>
+  <h4><%= micropost.content %></h4>
+  <%= pluralize(micropost.likes.count, "like") %>
+  <br>
+  <%= link_to uplike_micropost_path(micropost), method: :post do %>
+<i class="fas fa-heart"></i>
+  <% end %>Like
+  <br>
+  <span class="timestamp" style="color:gray;">
+    Posted <%= time_ago_in_words(micropost.created_at) %> ago.
+  </span>
+  <% if current_user?(micropost.user) %>
+  <%= link_to "delete", micropost, method: :delete,
+                                  data: { confirm: "You sure?" },
+                                  title: micropost.content %>
+                                  <% end %>
+</li>
